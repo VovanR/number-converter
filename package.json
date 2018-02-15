@@ -7,7 +7,7 @@
   "repository": "VovanR/number-converter",
   "author": "Vladimir Rodkin <mail@vovanr.com> (https://github.com/VovanR)",
   "engines": {
-    "node": ">=4"
+    "node": ">=9"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p",
