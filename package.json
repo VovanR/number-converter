@@ -1,7 +1,7 @@
 {
   "name": "number-converter",
   "version": "0.0.1",
-  "description": "%DESCRIPTION%",
+  "description": "Convert decimal and binary numbers",
   "private": true,
   "license": "MIT",
   "repository": "VovanR/number-converter",
