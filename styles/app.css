@@ -1,0 +1,57 @@
+.app {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	height: 100%;
+	padding: 2px;
+	font-size: var(--app-font-size);
+}
+
+.control {
+	position: relative;
+	display: flex;
+	flex: 1 0 auto;
+	font-size: 2em;
+	font-family: monospace;
+}
+
+.control + .control {
+  margin-top: 2px;
+}
+
+.control__label {
+	font-size: var(--control-label-font-size);
+	display: block;
+	position: absolute;
+	top: calc(var(--control-input-border-width) * 2);
+	left: calc(var(--control-input-border-width) * 2);
+}
+
+.control__input {
+	font-size: inherit;
+	color: inherit;
+	flex: 1 0 auto;
+	text-align: center;
+	outline: none;
+	border: var(--control-input-border-width) solid #fff;
+	transition: border ease 0.15s;
+}
+
+.control__input:focus {
+	border-color: #ff3304;
+}
+
+.control__input:invalid {
+	background-color: #ffc0cb;
+}
+
+/*
+#binary {
+	-moz-appearance: textfield;
+}
+#binary::-webkit-inner-spin-button,
+#binary::-webkit-outer-spin-button {
+	-webkit-appearance: textfield;
+	margin: 0;
+}
+*/
