@@ -5,7 +5,10 @@ const NUMBER_INPUT_KEY_BLACK_LIST = [
 	'E',
 	'-',
 	'+',
-	'='
+	'=',
+	',',
+	'.',
+	' '
 ];
 
 const DECIMAL_INPUT_KEY_BLACK_LIST = [...NUMBER_INPUT_KEY_BLACK_LIST];
