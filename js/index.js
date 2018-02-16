@@ -1,4 +1,4 @@
-/* global Vue */
+/* global Vue InputEvent */
 
 const NUMBER_INPUT_KEY_BLACK_LIST = [
 	'e',
@@ -46,7 +46,7 @@ const app = new Vue({
 		},
 
 		onBinaryInput(e) {
-			if (e.inputType === 'insertText') {
+			if (e instanceof InputEvent) {
 				this.value = binaryToDecimal(e.target.value);
 			} else {
 				// Change value with input spin buttons
