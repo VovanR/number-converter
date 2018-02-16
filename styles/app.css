@@ -29,6 +29,7 @@
 
 .control__input {
 	font-size: inherit;
+	font-family: inherit;
 	color: inherit;
 	flex: 1 0 auto;
 	text-align: center;
