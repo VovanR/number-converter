@@ -1,4 +1,4 @@
-/* global Vue InputEvent */
+/* global Vue */
 
 const NUMBER_INPUT_KEY_BLACK_LIST = [
 	'e',
@@ -46,17 +46,16 @@ const app = new Vue({
 		},
 
 		onBinaryInput(e) {
-			if (e instanceof InputEvent) {
-				this.value = binaryToDecimal(e.target.value);
+			const currentBinaryValue = this.binaryValue;
+			const newBinaryValue = parseInt(e.target.value, 10);
+			const different = newBinaryValue - currentBinaryValue;
+
+			if (different === -1) {
+				this.decrease();
+			} else if (different === 1) {
+				this.increase();
 			} else {
-				// Change value with input spin buttons
-				// Change value with arrow keys
-				const currentBinaryValue = decimalToBinary(this.value);
-				if (currentBinaryValue > e.target.value) {
-					this.decrease();
-				} else {
-					this.increase();
-				}
+				this.value = binaryToDecimal(e.target.value);
 			}
 		},
 
