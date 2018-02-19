@@ -10,7 +10,8 @@
     "node": ">=9"
   },
   "scripts": {
-    "test:lint": "xo",
+    "test": "npm run lint",
+    "lint": "xo",
     "start": "http-server .",
     "prepush": "npm test",
     "precommit": "npm test",
