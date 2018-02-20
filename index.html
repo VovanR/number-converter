@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>number-converter</title>
-	<meta name="description" content="Convert decimal and binary numbers">
+	<meta name="description" content="Convert decimal, binary and hexadecimal numbers">
 
 	<link href="styles/index.css" rel="stylesheet">
 </head>
@@ -40,6 +40,21 @@
 			v-on:input="onBinaryInput"
 			v-on:mousewheel="onBinaryMousewheel"
 			v-on:keydown="onBinaryKeyDown"
+		/>
+	</div>
+
+	<div class="control control_hexadecimal">
+		<label class="control__label" for="hexadecimal">hexadecimal</label>
+
+		<input
+			id="hexadecimal"
+			class="control__input"
+			type="text"
+			pattern="[\da-fA-F]+"
+			v-bind:value="hexadecimalValue"
+			v-on:input="onHexadecimalInput"
+			v-on:mousewheel="onHexadecimalMousewheel"
+			v-on:keydown="onHexadecimalKeyDown"
 		/>
 	</div>
 
