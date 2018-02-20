@@ -8,7 +8,7 @@
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
-> Convert decimal and binary numbers
+> Convert decimal, binary and hexadecimal numbers
 
 Demo: [vovanr.github.io/number-converter][demo]
 
