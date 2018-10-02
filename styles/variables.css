@@ -1,5 +1,6 @@
 :root {
-  --app-font-size: 1em;
-  --control-label-font-size: 0.75rem;
-  --control-input-border-width: 2px;
+	--font-family: monospace;
+	--app-font-size: 1em;
+	--control-label-font-size: 0.75rem;
+	--control-input-border-width: 2px;
 }

@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
@@ -9,4 +11,5 @@ body {
 
 body {
 	margin: 0;
+	font-family: var(--font-family);
 }
