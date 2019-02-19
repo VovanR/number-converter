@@ -5,6 +5,7 @@
 
 [![Commitizen friendly][commitizen-image]][commitizen-url]
 [![XO code style][codestyle-image]][codestyle-url]
+[![Tested with TestCafe][testcafe-image]][testcafe-url]
 
 [![Build Status][travis-image]][travis-url]
 [![Coveralls Status][coveralls-image]][coveralls-url]
@@ -27,6 +28,9 @@ MIT © [Vladimir Rodkin](https://github.com/VovanR)
 
 [codestyle-url]: https://github.com/sindresorhus/xo
 [codestyle-image]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square
+
+[testcafe-url]: https://github.com/DevExpress/testcafe
+[testcafe-image]: https://img.shields.io/badge/tested%20with-TestCafe-2fa4cf.svg?style=flat-square
 
 [travis-url]: https://travis-ci.org/VovanR/number-converter
 [travis-image]: https://img.shields.io/travis/VovanR/number-converter.svg?style=flat-square
