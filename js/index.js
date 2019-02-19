@@ -25,6 +25,7 @@ let i = 10;
 while (i-- > 2) {
 	BINARY_INPUT_KEY_BLACK_LIST.push(String(i));
 }
+
 // Create key map for faster search
 const BINARY_INPUT_KEY_BLACK_LIST_MAP = createIdMap(BINARY_INPUT_KEY_BLACK_LIST);
 
