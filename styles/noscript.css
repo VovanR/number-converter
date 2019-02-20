@@ -1,12 +1,13 @@
 noscript {
-	--space-around: 5px;
+  --space-around: 5px;
 
-	font-size: 1.25em;
-	text-align: center;
-	background-color: #FFC107;
-	padding: 1em 0.5em;
-	position: fixed;
-	top: var(--space-around);
-	left: var(--space-around);
-	right: var(--space-around);
+  font-size: 1.25em;
+  text-align: center;
+  background-color: #FFC107;
+  padding: 1em 0.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: var(--space-around) solid #fff;
 }
