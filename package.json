@@ -12,7 +12,7 @@
   "scripts": {
     "test": "npm run lint && npm run test:testcafe",
     "lint": "xo --plugin=testcafe --extend=\"plugin:testcafe/recommended\"",
-    "test:testcafe": "testcafe --assertion-timeout=1000 \"firefox:headless\" test-cafe/test.js --app \"http-server . -s\"",
+    "test:testcafe": "testcafe --assertion-timeout=1000 \"firefox:headless\" test-cafe/*.test.js --app \"http-server . -s\"",
     "start": "http-server .",
     "release-patch": "mversion patch",
     "release-minor": "mversion minor",
