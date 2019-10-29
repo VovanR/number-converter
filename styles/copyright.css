@@ -1,3 +1,19 @@
+/*
+@styleguide
+
+@title Copyright
+
+```html
+<a
+  class="copyright"
+  href="https://github.com/vovanr/demo-components"
+  target="_blank"
+  rel="noopener"
+>
+  <span class="copyright__license">MIT ©</span> <span class="copyright__author">Vladimir Rodkin</span>
+</a>
+```
+*/
 .copyright {
   position: fixed;
   right: 0;

@@ -1,6 +1,10 @@
 :root {
-  --font-family: monospace;
   --app-font-size: 1em;
+  /* Font stack from Bootstrap 4 */
+  --app-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --font-family: var(--app-font-family);
+
   --control-label-font-size: 0.75rem;
   --control-input-border-width: 2px;
 }
