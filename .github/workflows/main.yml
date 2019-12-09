@@ -1,0 +1,11 @@
+name: Lighthouse
+on: push
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Lighthouse CI Action
+      uses: treosh/lighthouse-ci-action@v2
+      with:
+        urls: https://vovanr.com/number-converter/
