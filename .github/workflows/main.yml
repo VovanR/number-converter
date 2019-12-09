@@ -9,3 +9,4 @@ jobs:
       uses: treosh/lighthouse-ci-action@v2
       with:
         urls: https://vovanr.com/number-converter/
+        temporaryPublicStorage: true
