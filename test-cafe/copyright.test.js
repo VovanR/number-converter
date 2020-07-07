@@ -6,14 +6,14 @@ const copyrightElement = Selector('.copyright');
 
 // eslint-disable-next-line no-unused-expressions
 fixture`Getting Started`
-	.page`http://localhost:8080`;
+  .page`http://localhost:8080`;
 
 test('should have copyright block with project source URL', async t => {
-	await t
-		.expect(copyrightElement.getAttribute('href')).eql('https://github.com/vovanr/number-converter');
+  await t
+    .expect(copyrightElement.getAttribute('href')).eql('https://github.com/vovanr/number-converter');
 });
 
 test('should have copyright block opens new tab URL', async t => {
-	await t
-		.expect(copyrightElement.getAttribute('target')).eql('_blank');
+  await t
+    .expect(copyrightElement.getAttribute('target')).eql('_blank');
 });
