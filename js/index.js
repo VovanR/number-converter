@@ -51,20 +51,20 @@ const app = new Vue({
   },
   methods: {
     // Decimal
-    onDecimalInput(e) {
-      this.setValue(parseInt(e.target.value, 10));
+    onDecimalInput({target: {value}}) {
+      this.setValue(Number.parseInt(value, 10));
     },
 
-    onDecimalKeyDown(e) {
-      if (DECIMAL_INPUT_KEY_BLACK_LIST_MAP[e.key]) {
-        e.preventDefault();
+    onDecimalKeyDown(event) {
+      if (DECIMAL_INPUT_KEY_BLACK_LIST_MAP[event.key]) {
+        event.preventDefault();
       }
     },
 
     // Binary
-    onBinaryInput(e) {
+    onBinaryInput({target: {value}}) {
       const currentBinaryValue = this.binaryValue;
-      const newBinaryValue = parseInt(e.target.value, 10);
+      const newBinaryValue = Number.parseInt(value, 2);
       const different = newBinaryValue - currentBinaryValue;
 
       if (different === -1) {
@@ -72,30 +72,30 @@ const app = new Vue({
       } else if (different === 1) {
         this.increase();
       } else {
-        this.setValue(binaryToDecimal(e.target.value));
+        this.setValue(binaryToDecimal(value));
       }
     },
 
-    onBinaryMousewheel(e) {
-      e.preventDefault();
+    onBinaryMousewheel(event) {
+      event.preventDefault();
 
-      if (e.wheelDeltaY > 0) {
+      if (event.wheelDeltaY > 0) {
         this.increase();
       } else {
         this.decrease();
       }
     },
 
-    onBinaryKeyDown(e) {
-      if (BINARY_INPUT_KEY_BLACK_LIST_MAP[e.key]) {
-        e.preventDefault();
+    onBinaryKeyDown(event) {
+      if (BINARY_INPUT_KEY_BLACK_LIST_MAP[event.key]) {
+        event.preventDefault();
       }
     },
 
     // Hexadecimal
-    onHexadecimalInput(e) {
+    onHexadecimalInput({target: {value}}) {
       const currentHexadecimalValue = this.hexadecimalValue;
-      const newHexadecimalValue = parseInt(e.target.value, 10);
+      const newHexadecimalValue = Number.parseInt(value, 10);
       const different = newHexadecimalValue - currentHexadecimalValue;
 
       if (different === -1) {
@@ -103,23 +103,23 @@ const app = new Vue({
       } else if (different === 1) {
         this.increase();
       } else {
-        this.setValue(hexadecimalToDecimal(e.target.value));
+        this.setValue(hexadecimalToDecimal(value));
       }
     },
 
-    onHexadecimalMousewheel(e) {
-      e.preventDefault();
+    onHexadecimalMousewheel(event) {
+      event.preventDefault();
 
-      if (e.wheelDeltaY > 0) {
+      if (event.wheelDeltaY > 0) {
         this.increase();
       } else {
         this.decrease();
       }
     },
 
-    onHexadecimalKeyDown(e) {
-      if (HEXADECIMAL_INPUT_KEY_BLACK_LIST_MAP[e.key]) {
-        e.preventDefault();
+    onHexadecimalKeyDown(event) {
+      if (HEXADECIMAL_INPUT_KEY_BLACK_LIST_MAP[event.key]) {
+        event.preventDefault();
       }
     },
 
@@ -146,7 +146,7 @@ const app = new Vue({
  * @returns {number}
  */
 function decimalToBinary(value) {
-  return parseInt(value.toString(2), 10);
+  return Number.parseInt(value.toString(2), 10);
 }
 
 /**
@@ -156,7 +156,7 @@ function decimalToBinary(value) {
  * @returns {number}
  */
 function binaryToDecimal(value) {
-  return parseInt(value, 2);
+  return Number.parseInt(value, 2);
 }
 
 /**
@@ -176,7 +176,7 @@ function decimalToHexadecimal(value) {
  * @returns {number}
  */
 function hexadecimalToDecimal(value) {
-  return parseInt(value, 16);
+  return Number.parseInt(value, 16);
 }
 
 /**
@@ -190,8 +190,11 @@ function hexadecimalToDecimal(value) {
  * //=> {foo: true, bar: true}
  */
 function createIdMap(list) {
-  return list.reduce((acc, key) => {
-    acc[key] = true;
-    return acc;
-  }, Object.create(null));
+  const idMap = Object.create(null);
+
+  list.forEach(key => {
+    idMap[key] = true;
+  });
+
+  return idMap;
 }
