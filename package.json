@@ -35,7 +35,7 @@
   "bugs": {
     "url": "https://github.com/VovanR/number-converter/issues"
   },
-  "homepage": "https://github.com/VovanR/number-converter#readme",
+  "homepage": "https://vovanr.github.io/number-converter",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
