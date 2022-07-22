@@ -23,6 +23,14 @@ test('Edit decimal, update binary', async t => {
     .expect(binaryInput.value).eql('1100');
 });
 
+/* TODO
+test('Big number', async t => {
+  await t
+    .typeText(decimalInput, '65537', {replace: true})
+    .expect(binaryInput.value).eql('10000000000000001');
+});
+*/
+
 test('Edit decimal, update hexadecimal', async t => {
   await t
     .typeText(decimalInput, '12', {replace: true})
