@@ -9,8 +9,6 @@
 
 [![Build Status][travis-image]][travis-url]
 [![Coveralls Status][coveralls-image]][coveralls-url]
-[![Dependency Status][depstat-image]][depstat-url]
-[![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
 > Convert decimal, binary and hexadecimal numbers
 
@@ -37,9 +35,3 @@ MIT © [Vladimir Rodkin](https://github.com/VovanR)
 
 [coveralls-url]: https://coveralls.io/r/VovanR/number-converter
 [coveralls-image]: https://img.shields.io/coveralls/VovanR/number-converter.svg?style=flat-square
-
-[depstat-url]: https://david-dm.org/VovanR/number-converter
-[depstat-image]: https://david-dm.org/VovanR/number-converter.svg?style=flat-square
-
-[depstat-dev-url]: https://david-dm.org/VovanR/number-converter
-[depstat-dev-image]: https://david-dm.org/VovanR/number-converter/dev-status.svg?style=flat-square
